@@ -3,9 +3,10 @@ RubyHwJdm::Application.routes.draw do
   
 
   root :to => "pages#index"
-    match '/about',    :to => 'pages#about'
-    match '/help',     :to => 'pages#help'
-    match '/login',       :to =>'users#login'
+    match '/index',      :to=> 'pages#index'
+    match '/about',     :to => 'pages#about'
+    match '/help',      :to => 'pages#help'
+    match '/login',     :to =>'users#login'
     match '/anmeldung', :to=> 'users#signup'
 
 
