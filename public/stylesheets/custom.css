@@ -95,10 +95,12 @@ border-right-width:6px;
     margin-left: 100px;
 }
 .text h1{
-    margin-left: 200px;;
+    margin-left: 150px;;
 }
 
 a.signup_button {
+    margin-left:auto;
+    margin-right: auto;
   display: block;
   text-align: center;
   width: 150px;
