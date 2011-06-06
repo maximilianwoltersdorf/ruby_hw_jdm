@@ -1,12 +1,12 @@
 RubyHwJdm::Application.routes.draw do
-  get "pages/index"
+  resources :users
   
-  get "users/login"
-  get "users/logout"
 
   root :to => "pages#index"
     match '/about',    :to => 'pages#about'
     match '/help',     :to => 'pages#help'
+    match '/login',       :to =>'users#login'
+    match '/anmeldung', :to=> 'users#signup'
 
 
   

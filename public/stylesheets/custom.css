@@ -1,0 +1,100 @@
+html{
+
+    height: 100%;
+    background: -moz-linear-gradient(top, #000, #150A53 80%, #000);
+}
+.wrapper{
+    margin-top: 40px;
+    width: 70%;
+    margin-left: 10%;
+    
+}
+
+                                /*Header mit Navigationsliste*/
+header{
+    margin-top: 30px;
+    border-bottom: double;
+    background-color: white;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    border-style: ridge;
+    border-width: 2px;
+    border-bottom-width:6px;
+    border-right-width:6px;   
+}
+.registrieren{
+    color: white;
+}
+.seitentitel{
+    color:#C9CC07;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navioben ul{
+    
+    margin-left: 300px;
+    text-align: right;
+    margin-right: 50px;
+
+    
+}
+.navioben ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 150%;
+  margin-right: 15px;
+}
+
+.navioben a {
+  color: #150A53;
+  text-decoration: none;
+}
+
+.navioben a:hover {
+  color: #150A53;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.navioben a:visited {
+  color: #150A53;
+}
+registration{
+    text-align:right;
+    margin-right: 50px;
+    float:right;
+}
+
+                                    /*Container für Navigationsleiste und Seiteninhalt */
+.content{
+width: 100%;
+height: 350px;
+margin-top: 30px;
+background-color: white;
+-moz-border-radius:    10px;
+-webkit-border-radius: 10px;
+border-radius:         10px;
+border-style: ridge;
+border-width:4px;
+border-bottom-width:6px;
+border-right-width:6px;
+}
+
+                                    /*Seiteninhalt*/
+.text{
+    margin-left: 100px;
+}
+
+
+footer{
+    text-align: center;
+    color: white;
+}
+
+/*Links im Header */
+
+
+
