@@ -2,6 +2,11 @@ RubyHwJdm::Application.routes.draw do
   get "pages/index"
 
   root :to => "pages#index"
+    match '/about',    :to => 'pages#about'
+    match '/help',     :to => 'pages#help'
+
+
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
