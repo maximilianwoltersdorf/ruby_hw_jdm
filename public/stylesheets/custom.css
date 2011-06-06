@@ -33,13 +33,10 @@ header{
     text-align: center;
 }
 
-.navioben ul{
-    
+.navioben ul{  
     margin-left: 300px;
     text-align: right;
     margin-right: 50px;
-
-    
 }
 .navioben ul li {
   list-style-type: none;
@@ -124,6 +121,16 @@ footer{
     color: white;
 }
 
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
 /*Links im Header */
 
 
