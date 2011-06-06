@@ -1,7 +1,7 @@
 html{
 
     height: 100%;
-    background: -moz-linear-gradient(top, #000, #150A53 80%, #000);
+    background: -moz-linear-gradient(top, #000, #150A53 20%, #000);
 }
 .wrapper{
     margin-top: 40px;
@@ -67,6 +67,13 @@ registration{
     margin-right: 50px;
     float:right;
 }
+registration a{
+    text-decoration: none;
+    color: #C9CC07;
+}
+registration a:hover{
+    text-decoration: underline;
+}
 
                                     /*Container für Navigationsleiste und Seiteninhalt */
 .content{
@@ -86,6 +93,27 @@ border-right-width:6px;
                                     /*Seiteninhalt*/
 .text{
     margin-left: 100px;
+}
+.text h1{
+    margin-left: 200px;;
+}
+
+a.signup_button {
+  display: block;
+  text-align: center;
+  width: 150px;
+  color: #fff;
+  background: #000;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #150A53;
+-moz-border-radius:    10px;
+-webkit-border-radius: 10px;
+border-radius:         10px;
+border-style: ridge;
+border-width:6px;
+
 }
 
 
