@@ -1,11 +1,14 @@
 <h1>
   <table>
     <tr>
-  <td><%= gravatar_for @user %></td>
-  <td><%= @user.name %></td>
+      <td><%= gravatar_for @user %></td>
+      <td>Name: </td>
+      <td><%= @user.name %></td>
     </tr>
-    <td>
-  <td><%= @user.email %></td>
+    <tr>
+      <td></td>
+      <td>Email: </td>
+      <td><%= @user.email %></td>
     </tr>
   </table>
 </h1>
