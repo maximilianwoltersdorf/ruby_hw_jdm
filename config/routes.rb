@@ -1,7 +1,9 @@
 RubyHwJdm::Application.routes.draw do
  
-  get "dashboards/index"
+ 
+  match '/dashboard', :to => 'dashboards#index'
 
+  resources :widgets
   resources :users
   
 

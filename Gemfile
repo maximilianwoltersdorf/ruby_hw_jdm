@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+gem "simple-rss", "~> 1.2.3"
 
 # gem 'googlecalendar'
 # Bundle edge Rails instead:

@@ -4,6 +4,8 @@ class DashboardsController < ApplicationController
     @title = "Dashboard"
     @dashboard = Dashboard.first
     
+    @widgets = @dashboard.widgets
+    
   end
 
 end

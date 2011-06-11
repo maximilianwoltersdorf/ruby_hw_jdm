@@ -1,2 +1,14 @@
-<h1>This is your dashboard, <%= @dashboard.user.name %></h1>
-<p>Find me in app/views/dashboards/index.html.erb</p>
+<h1>Willkommen auf deinem Dashboard, <%= @dashboard.user.name %></h1>
+
+<p><%= link_to 'Widgets bearbeiten', widgets_path %></p>
+
+<div class="container">
+	<% @widgets.each do |w| %>
+		<div class="widget">
+			<div class="widget_content">
+				<%= getWidgetContent(w) %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
