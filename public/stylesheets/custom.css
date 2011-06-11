@@ -75,7 +75,6 @@ registration a:hover{
                                     /*Container für Navigationsleiste und Seiteninhalt */
 .content{
 width: 100%;
-height: 350px;
 margin-top: 30px;
 background-color: white;
 -moz-border-radius:    10px;
@@ -130,6 +129,14 @@ footer{
 
 .field_with_errors label {
   color: #fff;
+}
+.flash{
+    margin: auto auto;
+    text-align: center;
+    border-style: solid;
+    border-color: #264A2D;
+    background-color: #A9EB6C;
+    width: 200px;
 }
 /*Links im Header */
 
