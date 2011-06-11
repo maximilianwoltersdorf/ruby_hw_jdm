@@ -24,6 +24,11 @@
     <%=render 'layouts/registration' %>
   </div>
     <div class = "content">
+      <div class = "flash">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}"%>
+      <%end%>
+      </div>
         <div class = "text">
         
           <% flash.each do |key, value| %>

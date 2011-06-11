@@ -131,6 +131,16 @@ footer{
   color: #fff;
 }
 
+.flash{
+    margin: auto auto;
+    text-align: center;
+    border-style: solid;
+    border-color: #264A2D;
+    background-color: #A9EB6C;
+    width: 200px;
+}
+
+
 #error_explanation {
   width: 400px;
   border: 2px solid red;
@@ -163,18 +173,7 @@ footer{
 div.field, div.actions {
   margin-bottom: 10px;
 }
-.flash{
-    width:350px;
-    border-style: solid;
-    border-color: #366E41;
-    margin-top: 20px;
-    background-color: #8AC92A;
-    font-size: 170%;
-    padding: 10px;
-    -moz-border-radius:    10px;
-    -webkit-border-radius: 10px;
-    border-radius:         10px;
-}
+
 /*Links im Header */
 
 .widget {

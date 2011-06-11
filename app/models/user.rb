@@ -1,8 +1,13 @@
 require 'digest'
 
 class User < ActiveRecord::Base
-  attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
+ # Include default devise modules. Others available are:
+  # :token_authenticatable, :lockable, :confirmable, :timeoutable and :activatable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -46,6 +51,5 @@ class User < ActiveRecord::Base
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
     end
-
 
   end

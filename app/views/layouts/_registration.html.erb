@@ -1,5 +1,10 @@
 <registration>
 <div class="registrieren">
-Noch nicht angemeldet? <%= link_to "Registriere", anmeldung_path %> dich hier!
+
+<%if user_signed_in? %>
+  Angemeldet als <%= link_to current_user.email, show_path %>
+<% else %>
+Noch nicht angemeldet? <%= link_to "Registriere", new_user_registration_path %> dich hier!
+<%end%>
 </div>
 </registration>
