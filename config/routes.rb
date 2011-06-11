@@ -1,4 +1,7 @@
 RubyHwJdm::Application.routes.draw do
+ 
+  get "dashboards/index"
+
   resources :users
   
 
