@@ -180,5 +180,7 @@ div.field, div.actions {
 .widget {
 	border: 1px #000 dashed;
 	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 

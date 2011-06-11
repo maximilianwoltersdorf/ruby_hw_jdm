@@ -6,7 +6,7 @@ module DashboardsHelper
                 
         output = "<h2>" + rss.channel.title + "</h2>"
                 
-        rss.items[0..5].each do |i|
+        rss.items[0..4].each do |i|
           output += "<h3>" + link_to(i.title, i.link, { :target => '_blank' }) + "</h3>"
         end
         

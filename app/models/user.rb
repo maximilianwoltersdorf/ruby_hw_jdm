@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
                        
   before_save :encrypt_password
   
+  has_many :widgets, :through => :dashboard
+  
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
