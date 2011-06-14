@@ -74,6 +74,7 @@ registration a:hover{
 
                                     /*Container für Navigationsleiste und Seiteninhalt */
 .content{
+    min-height: 250px;
 width: 100%;
 margin-top: 30px;
 background-color: white;
@@ -131,12 +132,17 @@ footer{
   color: #fff;
 }
 .flash{
-    margin: auto auto;
+    font-size: 150%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     text-align: center;
-    border-style: solid;
-    border-color: #264A2D;
     background-color: #A9EB6C;
-    width: 200px;
+    width: 300px;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    border-style: none;
 }
 /*Links im Header */
 
