@@ -2,6 +2,7 @@
 
 <div class = "navioben">     
 <ul>
+      <li><%= Time.now.to_formatted_s(:long)   %></li>
       <li><%= link_to "Home", index_path %></li>
       <li> | </li>
       <li><%= link_to "About", about_path %></li>
