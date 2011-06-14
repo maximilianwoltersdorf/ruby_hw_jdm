@@ -1,6 +1,7 @@
 RubyHwJdm::Application.routes.draw do
   devise_for :users
   resources :users
+  resources :widgets
   
   match '/dashboard', :to => 'dashboards#index'
 
