@@ -2,8 +2,12 @@
 <p>Die Site bietet euch verscheidene Dienste. Ihr koennt hier Nachrichten Feeds
    durch stoebern oder einen kalender verwalten. Wir arbeiten im Ramen einer
     Hausarbeit im Bereich Webentwicklung.</p>
+ 
+ <% if user_signed_in? %>
+ 
+ <% else %>
   <p>Meld dich an und schau mal rein: 
 
 <%= link_to "Anmeldung", new_user_registration_path, :class => "signup_button" %> </p>
-
+<%end %>
 

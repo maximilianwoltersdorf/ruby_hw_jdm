@@ -72,10 +72,10 @@ registration a:hover{
     text-decoration: underline;
 }
 
-                                    /*Container fï¿½r Navigationsleiste und Seiteninhalt */
+                                    /*Container für Navigationsleiste und Seiteninhalt */
 .content{
+    min-height: 250px;
 width: 100%;
-min-height: 350px;
 margin-top: 30px;
 background-color: white;
 -moz-border-radius:    10px;
@@ -85,14 +85,15 @@ border-style: ridge;
 border-width:4px;
 border-bottom-width:6px;
 border-right-width:6px;
-
 }
 
                                     /*Seiteninhalt*/
 .text{
-  padding: 10px; 
+    margin-left: 100px;
 }
-
+.text h1{
+    margin-left: 150px;;
+}
 
 a.signup_button {
     margin-left:auto;
@@ -130,56 +131,20 @@ footer{
 .field_with_errors label {
   color: #fff;
 }
-
 .flash{
-    margin: auto auto;
+    font-size: 150%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     text-align: center;
-    border-style: solid;
-    border-color: #264A2D;
     background-color: #A9EB6C;
-    width: 200px;
+    width: 300px;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    border-style: none;
 }
-
-
-#error_explanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#error_explanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
 /*Links im Header */
 
-.widget {
-	border: 1px #000 dashed;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
+
 

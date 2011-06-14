@@ -1,5 +1,4 @@
 RubyHwJdm::Application.routes.draw do
-  resources :widgets
   devise_for :users
   resources :users
   
@@ -12,7 +11,7 @@ RubyHwJdm::Application.routes.draw do
     match '/login',     :to =>'users#login'
     match '/anmeldung', :to=> 'users#signup'
     match '/show',      :to=> 'users#show'
-    
+
 
 
   
