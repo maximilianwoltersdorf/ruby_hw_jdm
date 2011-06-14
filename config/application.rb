@@ -7,7 +7,12 @@ require 'rails/all'
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module RubyHwJdm
-  class Application < Rails::Application
+  
+require 'rubygems'
+require 'simple-rss'
+require 'open-uri'
+
+class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
