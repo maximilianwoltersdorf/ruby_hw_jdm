@@ -1,0 +1,19 @@
+<h1>Neues Widget anlegen</h1>
+
+<% form_for(@widget) do |f| %>
+  <div class="field">
+    <%= f.label :sourcename %><br />
+    <%= f.text_field :sourcename %>
+  </div>
+  <div class="field">
+    <%= f.label :sourceurl %><br />
+    <%= f.url_field :sourceurl %>
+  </div>
+  <div class="field">
+<%= f.label :sourcetype_id %><br />
+    <%= collection_select("widget", "sourcetype_id", @sourcetypes, :id, :name ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Anlegen" %>
+  </div>
+<% end %>
