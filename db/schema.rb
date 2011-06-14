@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110611091309) do
+ActiveRecord::Schema.define(:version => 20110611130549) do
 
   create_table "dashboards", :force => true do |t|
     t.integer  "user_id"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(:version => 20110611091309) do
     t.datetime "updated_at"
   end
 
- 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
     t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
@@ -43,5 +42,14 @@ ActiveRecord::Schema.define(:version => 20110611091309) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "widgets", :force => true do |t|
+    t.integer  "dashboard_id"
+    t.integer  "sourcetype_id"
+    t.string   "sourcename"
+    t.string   "sourceurl"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

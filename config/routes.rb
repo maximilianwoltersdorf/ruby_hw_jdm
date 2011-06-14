@@ -3,6 +3,7 @@ RubyHwJdm::Application.routes.draw do
   devise_for :users
   resources :users
   
+  match '/dashboard', :to => 'dashboards#index'
 
   root :to => "pages#index"
     match '/index',      :to=> 'pages#index'

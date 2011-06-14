@@ -4,7 +4,11 @@ class DashboardsController < ApplicationController
     @title = "Dashboard"
     @dashboard = Dashboard.first
     
-    @widgets = @dashboard.widgets
+    if @dashboard
+      if @dashboard.widgets
+        @widgets = @dashboard.widgets
+      end
+    end
     
   end
 
