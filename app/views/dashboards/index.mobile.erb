@@ -1,0 +1,16 @@
+
+<h1>Willkommen auf deinem Dashboard!</h1>
+
+<p><%= link_to 'Widgets bearbeiten', widgets_path %></p>
+
+<div class="container">
+<% if !@widgets.nil? %>
+	<% @widgets.each do |w| %>
+	<div class="widget">
+	<div class="widget_content">
+	<%= getWidgetContent(w) %>
+	</div>
+	</div>
+	<% end %>
+<% end %>
+</div>
