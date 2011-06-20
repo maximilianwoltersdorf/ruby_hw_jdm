@@ -7,6 +7,7 @@ html{
     margin-top: 40px;
     width: 70%;
     margin-left: 10%;
+   
     
 }
 
@@ -137,6 +138,7 @@ border-style: ridge;
 border-width:4px;
 border-bottom-width:6px;
 border-right-width:6px;
+ padding-bottom: 10px;
 }
 
                                     /*Seiteninhalt*/
@@ -194,6 +196,9 @@ footer{
     -webkit-border-radius: 10px;
     border-radius:         10px;
     border-style: none;
+}
+video{
+float: left;
 }
 /*Links im Header */
 

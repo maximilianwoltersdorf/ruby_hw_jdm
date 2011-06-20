@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @title = "Deine Streams"
     video = "/video/"
     url = Stream.find_by_id(1+rand(Stream.count)).url
+    
     @video_path = video + url
   end
   

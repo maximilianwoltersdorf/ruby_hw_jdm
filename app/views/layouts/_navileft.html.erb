@@ -7,7 +7,7 @@
     <li><%= link_to "Dashboard", dashboard_path %></li>
     <li><%= link_to "Konfiguration", config_path %></li>
     <%else %>
-    <%= link_to "Anmeldung", new_user_registration_path, :class => "signup_button" %>
+    <li><%= link_to "Anmeldung", new_user_registration_path %></li>
   <% end%>
 </ul>
 
