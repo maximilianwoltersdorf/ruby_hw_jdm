@@ -24,7 +24,7 @@ class WidgetsController < ApplicationController
   
   def destroy
     if Widget.find(params[:id]).delete()
-      flash[:success] = "Erfolgreich gelöscht!"
+      flash[:success] = "Erfolgreich geloescht!"
       redirect_to widgets_path
     end
   end
