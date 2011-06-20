@@ -2,12 +2,14 @@ class DashboardsController < ApplicationController
   
   def index
     @title = "Dashboard"
-    @dashboard = Dashboard.first
+    @dashboard = Dashboard.find(:first, :conditions => { :user_id => current_user })
     
     if @dashboard
       if @dashboard.widgets
         @widgets = @dashboard.widgets
       end
+    else
+      Dashboard.create!({ :user_id => current_user })
     end
    end
    
