@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
   
   private
   
+    def user_is_logged_in?
+      if !current_user.nil?
+        current_user
+      else
+        flash[:error] = "Bitte erst einloggen!"
+        redirect_to new_user_session_path
+      end
+    end
+  
     def mobile_device?
       if session[:mobile_param]
         session[:mobile_param] == "1"
@@ -17,11 +26,10 @@ class ApplicationController < ActionController::Base
         request.user_agent =~ /Mobile|webOS/
       end
     end
+    helper_method :mobile_device?
     
     def prepare_for_mobile
-      session[:mobile_param] = params[:mobile] if params[:mobile]  
+      session[:mobile_param] = params[:mobile] if params[:mobile]
       request.format = :mobile if mobile_device?
     end
-    
-    helper_method :mobile_device?  
 end

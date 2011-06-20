@@ -1,4 +1,6 @@
 class WidgetsController < ApplicationController
+  before_filter :user_is_logged_in?
+  
   def index
     @title = "Widgets"
     dashboard = Dashboard.find_by_user_id(current_user.id)
@@ -12,7 +14,7 @@ class WidgetsController < ApplicationController
   end
   
   def create
-    dashboard = Dashboard.find(:first, :conditions => { :user_id => current_user.id })
+    dashboard = Dashboard.find_by_user_id(current_user.id)
     
     params[:widget][:dashboard_id] = dashboard.id
     @widget = Widget.new(params[:widget])

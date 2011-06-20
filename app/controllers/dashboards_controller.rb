@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
+  before_filter :user_is_logged_in?
   
   def index
     @title = "Dashboard"
