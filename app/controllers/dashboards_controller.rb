@@ -9,9 +9,10 @@ class DashboardsController < ApplicationController
         @widgets = @dashboard.widgets
       end
     end
-   def konfiguration
-     @title = "Config"
    end
+   
+   def konfiguration
+     @title = "Konfiguration"
   end
 
 end
