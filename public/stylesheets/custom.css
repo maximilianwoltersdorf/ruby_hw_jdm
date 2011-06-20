@@ -42,6 +42,7 @@ header{
   display: inline-block;
   font-size: 150%;
   margin-right: 15px;
+  
 }
 
 .navioben a {
@@ -71,6 +72,58 @@ registration a:hover{
     text-decoration: underline;
 }
 
+navileft{
+    float: left;
+    width: 170px;
+    font-size:140%;
+    
+}
+
+.navileft ul{
+    margin-top: 40px;
+    
+}
+
+navileft ul li{
+  list-style-type: none;
+   margin-top: 1px;
+    display: block;
+    width: 140px;
+    height:25px;
+    background: #000;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3px;
+    background-color: #150A53;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    border-style: ridge;
+    border-width:6px;
+    text-decoration: none;
+    
+    
+  
+    
+}
+.navtitle{
+    color: #C9CC07;
+}
+
+.navileft a{
+    color: #fff;
+    text-decoration: none;
+
+}
+.navileft a:hover{
+    text-decoration: underline;
+}
+.navileft a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+
                                     /*Container für Navigationsleiste und Seiteninhalt */
 .content{
     min-height: 250px;
@@ -88,29 +141,28 @@ border-right-width:6px;
 
                                     /*Seiteninhalt*/
 .text{
-    margin-left: 100px;
+    margin-left: 280px;
 }
 .text h1{
-    margin-left: 150px;;
+    margin-left: 20px;
 }
 
 a.signup_button {
-    margin-left:auto;
-    margin-right: auto;
-  display: block;
-  text-align: center;
-  width: 150px;
-  color: #fff;
-  background: #000;
-  font-size: 150%;
-  font-weight: bold;
-  padding: 20px;
-  background-color: #150A53;
--moz-border-radius:    10px;
--webkit-border-radius: 10px;
-border-radius:         10px;
-border-style: ridge;
-border-width:6px;
+    margin-top: 1px;
+    display: block;
+    width: 140px;
+    height:25px;
+    color: #fff;
+    background: #000;
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3px;
+    background-color: #150A53;
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+    border-style: ridge;
+    border-width:6px;
 
 }
 

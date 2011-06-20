@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+
+  
   def index
     @title = "Home"
   end
@@ -9,6 +11,10 @@ class PagesController < ApplicationController
   
   def help
     @title = "Help"
+  end
+  
+  def about
+    @title = "About"
   end
 
 end

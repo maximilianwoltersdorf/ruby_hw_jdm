@@ -22,10 +22,13 @@
   <%= render 'layouts/seitentitel' %>
   </div>
   <%= render 'layouts/header' %>
-  <div lass ="registration">
+  <div class ="registration">
     <%=render 'layouts/registration' %>
   </div>
     <div class = "content">
+      <div class = "navileft">
+        <%= render 'layouts/navileft' %>
+      </div>
       <div class = "flash">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}"%>

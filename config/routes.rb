@@ -2,17 +2,20 @@ RubyHwJdm::Application.routes.draw do
   devise_for :users
   resources :users
   resources :widgets
+  #resources :dashboards
+ 
   
-  match '/dashboard', :to => 'dashboards#index'
 
-  root :to => "pages#index"
-    match '/index',      :to=> 'pages#index'
-    match '/stream',     :to => 'pages#stream'
-    match '/help',      :to => 'pages#help'
-    match '/login',     :to =>'users#login'
-    match '/anmeldung', :to=> 'users#signup'
-    match '/show',      :to=> 'users#show'
-
+    root :to => "pages#index"
+    match '/index',         :to=> 'pages#index'
+    match '/stream',        :to => 'pages#stream'
+    match '/help',          :to => 'pages#help'
+    match '/login',         :to =>'users#login'
+    match '/anmeldung',     :to=> 'users#signup'
+    match '/show',          :to=> 'users#show'
+    match '/about',         :to => 'pages#about'
+    match '/dashboard',     :to => 'dashboards#index'
+    match '/config',        :to => 'dashboards#konfiguration'
 
 
   
