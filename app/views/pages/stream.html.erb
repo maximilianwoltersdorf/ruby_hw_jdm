@@ -1,6 +1,8 @@
 
-<% video = "/video/"%>
-<% url = "barsandtone.flv" %>
-<% file = video + url %>
 
-<%= player({:file => file, :skin=>'stijl'}) %>
+<!--
+http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v5/12536/configuration-options
+-->
+<%= player({:file => @video_path,
+            :autostart => 'true',
+            :skin=>'stijl'}) %>

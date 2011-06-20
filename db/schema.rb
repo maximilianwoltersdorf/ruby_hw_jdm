@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110614101704) do
+ActiveRecord::Schema.define(:version => 20110620103223) do
 
   create_table "dashboards", :force => true do |t|
     t.integer  "user_id"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(:version => 20110614101704) do
 
   create_table "sourcetypes", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "streams", :force => true do |t|
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
