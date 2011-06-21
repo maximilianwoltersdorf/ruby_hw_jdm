@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+    before_filter :authenticate, :only => [:stream]
 
   
   def index

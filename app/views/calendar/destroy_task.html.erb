@@ -1,0 +1,12 @@
+<h1> Termin loeschen </h1>
+
+<table>
+  <tr>
+    <td colspan = 2><%= @task.task_title %> am <%= @task.task_date%> wirklich loeschen?</td>
+  </tr>
+  <tr>
+    <td><%= link_to "Ja", destroy_task_path(:iddelete => @task.id) %></td>
+    <td><%= link_to "Nein", calendar_path%></td>
+  </tr>
+</table>
+    

@@ -1,4 +1,7 @@
 class WidgetsController < ApplicationController
+      before_filter :authenticate
+
+  
   def index
     @title = "Widgets"
     @widgets = Widget.all

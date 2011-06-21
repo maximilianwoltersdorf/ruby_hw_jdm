@@ -1,0 +1,26 @@
+
+
+<div id="calendar">
+  <%= @first_day_of_week %>
+  <h2 id="month">
+     <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
+    <%= h @date.strftime("%B %Y") %>
+ <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
+  </h2>
+  <p class="navioben"><%= link_to "Neuen Termin anlegen", new_date_path%><br>
+  
+  
+  <% calendar_for (@tasks, :year => @date.year, :month => @date.month) do |t| %>
+    
+    <%= t.head('So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa') %>
+    <%  t.day(:day_method => :task_date) do |date, tasks| %>
+        <%= date.day %>
+      <ul>
+        <% for task in tasks %>
+          <li><%=h(task.task_title)%> </li>
+          <li><%= link_to "delete", destroy_task_path(:id => task.id)%>
+          <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</div>

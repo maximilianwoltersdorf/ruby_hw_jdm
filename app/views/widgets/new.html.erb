@@ -12,6 +12,8 @@
   <div class="field">
 <%= f.label :sourcetype_id %><br />
     <%= collection_select("widget", "sourcetype_id", @sourcetypes, :id, :name ) %>
+
+
   </div>
   <div class="actions">
     <%= f.submit "Anlegen" %>

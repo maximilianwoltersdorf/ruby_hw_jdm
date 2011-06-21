@@ -1,0 +1,18 @@
+<h1> Neuen Termin anlegen </h1>
+
+<%= puts params[:task] %>
+
+<% form_for @task, :url=> {:action =>:new_date}  do |f| %>
+
+<div class = "field">
+<p><%= f.label "Datum"%>
+<%= f.text_field :task_date %></p>
+
+<p><%= f.label "Eintrag"%>
+<%= f.text_field :task_title %></p>
+
+</div>
+<div class="actions">
+<%= f.submit "Speichern" %>
+</div>
+<%end%>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110620133659) do
+ActiveRecord::Schema.define(:version => 20110621072632) do
 
   create_table "dashboards", :force => true do |t|
     t.integer  "user_id"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(:version => 20110620133659) do
 
   create_table "streams", :force => true do |t|
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "user_email"
+    t.string   "task_title"
+    t.date     "task_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

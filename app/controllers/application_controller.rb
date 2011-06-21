@@ -23,5 +23,13 @@ class ApplicationController < ActionController::Base
       request.format = :mobile if mobile_device?
     end
     
-    helper_method :mobile_device?  
+    helper_method :mobile_device?
+
+    def authenticate
+      if current_user
+        
+      else
+      redirect_to new_user_registration_path
+      end
+    end
 end
