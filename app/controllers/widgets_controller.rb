@@ -4,7 +4,8 @@ class WidgetsController < ApplicationController
   
   def index
     @title = "Widgets"
-    @widgets = Widget.all
+    dashboard = Dashboard.find_by_user_id(current_user.id)
+    @widgets = dashboard.widgets
   end
   
   def new
@@ -14,7 +15,9 @@ class WidgetsController < ApplicationController
   end
   
   def create
-    params[:widget][:dashboard_id] = 1
+    dashboard = Dashboard.find_by_user_id(current_user.id)
+    
+    params[:widget][:dashboard_id] = dashboard.id
     @widget = Widget.new(params[:widget])
     if @widget.save
       flash[:success] = "Widget gespeichert!"
@@ -24,7 +27,7 @@ class WidgetsController < ApplicationController
   
   def destroy
     if Widget.find(params[:id]).delete()
-      flash[:success] = "Erfolgreich gelöscht!"
+      flash[:success] = "Erfolgreich geloescht!"
       redirect_to widgets_path
     end
   end

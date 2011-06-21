@@ -1,3 +1,9 @@
 <footer>
-  created by: Julian, Dirk, Max
+  created by: Julian, Dirk, Max<br />
+  <% if Rails.env.development? %>
+  	<div style="text-align: left;">
+	  	<%= debug(params) %>
+	  	<%= debug(session) %>
+  	</div>
+  <% end %>
 </footer>

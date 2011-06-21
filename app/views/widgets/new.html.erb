@@ -1,20 +1,30 @@
 <h1>Neues Widget anlegen</h1>
 
+<p>W&auml;hle aus diesen vordefinierten Quellen:</p>
+<select id="sourceTemplates" onchange="$('widget_sourceurl').value = $('sourceTemplates').value;">
+	<option>--</option>
+	<option value="http://www.heise.de/newsticker/heise.rdf">Heise.de Newsticker</option>
+	<option value="http://www.ftd.de/rss2">Financial Times Deutschland</option>
+	<option value="http://www.spiegel.de/schlagzeilen/tops/index.rss">Spiegel Online</option>
+</select>
+
+<p>oder gib eine eigene Quelle ein: </p>
 <% form_for(@widget) do |f| %>
   <div class="field">
-    <%= f.label :sourcename %><br />
+    <%= f.label :sourcename, 'Name:' %><br />
     <%= f.text_field :sourcename %>
   </div>
   <div class="field">
-    <%= f.label :sourceurl %><br />
+    <%= f.label :sourceurl, 'URL der Quelle:' %><br />
     <%= f.url_field :sourceurl %>
   </div>
   <div class="field">
-<%= f.label :sourcetype_id %><br />
+<%= f.label :sourcetype_id, 'Typ der Quelle:' %><br />
     <%= collection_select("widget", "sourcetype_id", @sourcetypes, :id, :name ) %>
 
 
   </div>
+  <br />
   <div class="actions">
     <%= f.submit "Anlegen" %>
   </div>
