@@ -26,16 +26,14 @@ class ApplicationController < ActionController::Base
         request.user_agent =~ /Mobile|webOS/
       end
     end
+    
     helper_method :mobile_device?
     
     def prepare_for_mobile
       session[:mobile_param] = params[:mobile] if params[:mobile]
       request.format = :mobile if mobile_device?
     end
-
     
-    helper_method :mobile_device?
-
     def authenticate
       if current_user
         

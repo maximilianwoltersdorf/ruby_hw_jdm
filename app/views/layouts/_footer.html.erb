@@ -1,9 +1,9 @@
-<footer>
-  created by: Julian, Dirk, Max<br />
-  <% if Rails.env.development? %>
+<header> <p align = center> created by: Julian, Dirk, Max<br />
+ 
+</header>
+ <% if Rails.env.development? %>
   	<div style="text-align: left;">
 	  	<%= debug(params) %>
 	  	<%= debug(session) %>
   	</div>
   <% end %>
-</footer>
