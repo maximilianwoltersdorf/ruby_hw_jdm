@@ -4,9 +4,9 @@
     <%if user_signed_in? %>
     <li><%= link_to "Stream", stream_path %></li>
     <li><%= link_to "Dashboard", dashboard_path %></li>
-    <li><%= link_to "Kalender", calendar_path %></li>
+    <li><%= link_to "Calendar", calendar_path %></li>
     <%else %>
-    <li><%= link_to "Anmeldung", new_user_registration_path %></li>
+    <li><%= link_to "Sign-Up", new_user_registration_path %></li>
   <% end%>
 </ul>
 
