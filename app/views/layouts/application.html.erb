@@ -7,7 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Portal | <%= @title %></title>
 <%= render 'layouts/stylesheets' %>
-<%= javascript_include_tag :defaults, 'swfobject', "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+<% if @title ==  "Deine Streams" %>
+	<%= javascript_include_tag 'swfobject', "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+<% else %>
+	<%= javascript_include_tag :defaults %>
+<% end %>
 </head>
 
 <body>
@@ -18,18 +22,20 @@
     <%=render 'layouts/registration' %>
   </div>
     <div class = "content">
-      <div class = "navileft">
-        <%= render 'layouts/navileft' %>
-      </div>
-      <div class = "flash">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}"%>
-      <%end%>
-      </div>
-        <div class = "text">
-        <%= yield %>
-        </div>
-    </div>
+      <div class="inner_content">
+	      <div class = "navileft">
+	        <%= render 'layouts/navileft' %>
+	      </div>
+	      <div class = "flash">
+	      <% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}"%>
+	      <%end%>
+	      </div>
+	        <div class = "text">
+	        <%= yield %>
+	        </div>
+	    </div>
+	  </div>
   <%= render 'layouts/footer' %>
 </div>
 </body>

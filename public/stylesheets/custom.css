@@ -166,6 +166,10 @@ border-right-width:6px;
  padding-bottom: 10px;
 }
 
+.inner_content {
+	padding: 10px;
+}
+
                                     /*Seiteninhalt*/
 .text{
     margin-left: 280px;
@@ -293,7 +297,13 @@ float: left;
     padding: 4px;
 }
 
-    
+.widget {
+	border: 1px #A0A0A0 dashed;
+	padding: 10px;
+	background-color: #F0F0F0;
+	margin-bottom: 10px;
+}
 
-
-
+.widget h2 {
+	margin-top: 5px;	
+}
