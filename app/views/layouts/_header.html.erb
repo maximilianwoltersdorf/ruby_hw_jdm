@@ -3,18 +3,23 @@
 <div class = "navioben">     
 <ul>
    
-      <li><%= link_to "Home", root_path %></li>
-      <li> | </li>
-      <li><%= link_to "About", about_path %></li>
-      <li> | </li>
-      <%if user_signed_in?%>
-      <li><%= link_to "Logout", destroy_user_session_path %></li>
-      <%else%>
-      <li><%= link_to "Login", new_user_session_path %></li>
-      <%end%>
-
-
-      
+	<li><%= link_to "Home", root_path %></li>
+	<li> | </li>
+	<li><%= link_to "About", about_path %></li>
+	<li> | </li>
+	<%if user_signed_in?%>
+		<li><%= link_to "Logout", destroy_user_session_path %></li>
+	<%else%>
+		<li><%= link_to "Login", new_user_session_path %></li>
+	<%end%>
+     
+    <li> | </li>
+     
+	<% if mobile_device? %>
+		<li><%= link_to 'Full Site', :mobile => 0 %></li>
+	<% else %>
+		<li><%= link_to 'Mobile Site', :mobile => 1 %></li>
+	<% end %>       
 </ul>
 
 </header>
