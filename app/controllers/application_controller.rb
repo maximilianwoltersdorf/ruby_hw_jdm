@@ -5,7 +5,12 @@ class ApplicationController < ActionController::Base
   before_filter :prepare_for_mobile
   
   def after_sign_in_path_for(resource)
-   "/stream"
+    if mobile_device?
+      "/dashboard"
+    else
+      "/stream"
+    end
+   
   end
   
   private
