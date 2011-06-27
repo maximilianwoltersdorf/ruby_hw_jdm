@@ -8,11 +8,19 @@ module DashboardsHelper
           rss = SimpleRSS.parse open(widget.sourceurl)
         
           if rss.items        
-            output = '<h2>' + image_tag('bullet_toggle_plus.png', { :onclick => "new Effect.toggle('" + widget.id.to_s + "');"}) + rss.channel.title + '</h2>'
+            if mobile_device?
+              output = '<h2 style="margin-left: 0px;">' + rss.channel.title + '</h2>'
+            else
+              output = '<h2 style="margin-left: 0px;">' + image_tag('bullet_toggle_plus.png', { :onclick => "new Effect.toggle('" + widget.id.to_s + "');"}) + rss.channel.title + '</h2>'
+            end
             
             output += "<div id='" + widget.id.to_s + "'>"        
             rss.items[0..4].each do |i|
-              output += "<h3>" + link_to(i.title, i.link, { :target => '_blank' }) + "</h3>"
+              if mobile_device?
+                output += "<h3>" + link_to(i.title, i.link, { :rel => "external" }) + "</h3>"
+              else
+                output += "<h3>" + link_to(i.title, i.link, { :target => "_blank" }) + "</h3>"
+              end
             end
             output += '</div>'
             
