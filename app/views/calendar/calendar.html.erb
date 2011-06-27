@@ -8,7 +8,7 @@
   <p class="navioben"><%= link_to "Neuen Termin anlegen", new_date_path%><br>
   
   
-  <% calendar_for (@tasks, :year => @date.year, :month => @date.month) do |t| %>
+  <% calendar_for (@tasks, {:year => @date.year, :month => @date.month}) do |t| %>
     
     <%= t.head('So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa') %>
     <%  t.day(:day_method => :task_date) do |date, tasks| %>
