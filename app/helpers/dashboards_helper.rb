@@ -9,9 +9,9 @@ module DashboardsHelper
         
           if rss.items        
             if mobile_device?
-              output = '<h2 style="margin-left: 0px;">' + widget.name + '</h2>'
+              output = '<h2 style="margin-left: 0px;">' + widget.sourcename + '</h2>'
             else
-              output = '<h2 style="margin-left: 0px;">' + image_tag('bullet_toggle_plus.png', { :onclick => "new Effect.toggle('" + widget.id.to_s + "');"}) + widget.name + '</h2>'
+              output = '<h2 style="margin-left: 0px;">' + image_tag('bullet_toggle_plus.png', { :onclick => "new Effect.toggle('" + widget.id.to_s + "');"}) + widget.sourcename + '</h2>'
             end
             
             output += "<div id='" + widget.id.to_s + "'>"        
