@@ -1,12 +1,7 @@
 RubyHwJdm::Application.routes.draw do
+ 
   devise_for :users
-  resources :users
   resources :widgets
- 
-
-  
- 
-  
 
     root :to => "pages#index"
     match '/index',         :to=> 'pages#index'
@@ -20,7 +15,8 @@ RubyHwJdm::Application.routes.draw do
     match '/config',        :to => 'dashboards#konfiguration'
     match '/calendar',      :to => 'calendar#calendar'
     match '/new_date',      :to => 'calendar#new_date'
-    match '/destroy_task',   :to => 'calendar#destroy_task'
+
+
 
 
 

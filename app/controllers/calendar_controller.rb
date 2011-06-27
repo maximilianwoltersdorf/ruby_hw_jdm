@@ -5,6 +5,13 @@ class CalendarController < ApplicationController
   @title = "Kalender"
   @date = params[:month] ? Date.parse(params[:month]) : Date.today
   @tasks = Tasks.where(:user_email == current_user.email).all
+  
+  if params[:iddelete]
+    @id = params[:iddelete]
+   Tasks.delete(@id)
+   flash[:success] = "Termin geloescht"
+   redirect_to calendar_path
+   end
   end
   
    
@@ -23,21 +30,6 @@ class CalendarController < ApplicationController
     end
  end
  
- def destroy_task
-   
-   if params[:id]
-   @title = "Termin loeschen"
-   @id = params[:id]
-   @task = Tasks.find(params[:id])
-   end
-   
-   if params[:iddelete]
-    @id = params[:iddelete]
-   Tasks.delete(@id)
-   flash[:success] = "Termin geloescht"
-   redirect_to calendar_path
-   end
- end
 end 
  
  

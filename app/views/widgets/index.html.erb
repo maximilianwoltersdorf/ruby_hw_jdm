@@ -16,7 +16,7 @@
 <td><%= w.sourcename %></td>
 <td><%= w.sourcetype.name %></td>
 <td><%= w.sourceurl %></td>
-<td><%= link_to 'Löschen', widget_path(w), :confirm => "Wirklich löschen?", :method => :delete %></td>
+<td><%= link_to 'Löschen', widget_path(w) , :method => :delete %></td>
 </tr>
 <% end %>
 </table>

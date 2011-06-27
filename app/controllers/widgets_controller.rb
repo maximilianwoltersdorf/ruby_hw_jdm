@@ -6,6 +6,7 @@ class WidgetsController < ApplicationController
     @title = "Widgets"
     dashboard = Dashboard.find_by_user_id(current_user.id)
     @widgets = dashboard.widgets
+    
   end
   
   def new
@@ -25,12 +26,22 @@ class WidgetsController < ApplicationController
     end
   end
   
-  def destroy
-    if Widget.find(params[:id]).delete()
+  def show
+   if params[:delid]
+       @deleteid = params[:id]
+      Widget.delete(@deleteid)
       flash[:success] = "Erfolgreich geloescht!"
-      redirect_to widgets_path
+      redirect_to dashboard_path
     end
   end
-
+  
+  def destroy
+  
+      if Widget.delete(@deleteid)
+      flash[:success] = "Erfolgreich geloescht!"
+      redirect_to dashboard_path
+    
+  end
+end
 end
 
