@@ -307,3 +307,14 @@ float: left;
 .widget h2 {
 	margin-top: 5px;	
 }
+
+label{
+    width: 10em;
+    display: block;
+    float: left;
+}
+form{
+    background-color: #eeeeff;
+    padding: 20px;
+    border: 1px solid silver;
+}
