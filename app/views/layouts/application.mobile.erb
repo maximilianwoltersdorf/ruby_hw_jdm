@@ -14,7 +14,7 @@
 <body>
 	<div class="current">
 		<div class="toolbar">
-			<%= link_to "Back", root_url, :class => "back" unless current_page? root_path %>
+			<%= link_to "Back", '', :class => "back" unless current_page? root_path %>
 			<h1><%= @title %></h1>
 			<%= link_to 'Full Site', root_url(:mobile => 0), :class => "button", :rel => "external" %>
 		</div>
