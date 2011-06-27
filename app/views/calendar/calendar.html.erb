@@ -19,8 +19,7 @@
         <% for task in tasks %>
           <li><%=h(task.task_title)%> </li>
           <li><%= link_to "delete", calendar_path(:iddelete => task.id), :confirm => "Wirklich loeschen?"%>
-          <% end %>
+        <% end %>
       </ul>
-    <% end %>
   <% end %>
 </div>
