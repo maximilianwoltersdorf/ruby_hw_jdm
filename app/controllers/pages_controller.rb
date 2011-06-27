@@ -9,10 +9,10 @@ class PagesController < ApplicationController
   def stream
     @title = "Deine Streams"
     video = "/video/"
-    url = Stream.find_by_id(1+rand(Stream.count))
+    stream = Stream.find_by_id(1+rand(Stream.count))
     
-    if !url.nil?
-      real_url = url.url
+    if !stream.nil?
+      real_url = stream.url
     else
       real_url = ""
     end
