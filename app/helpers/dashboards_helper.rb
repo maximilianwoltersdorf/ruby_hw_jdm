@@ -4,7 +4,7 @@ module DashboardsHelper
         # Quelle: http://simple-rss.rubyforge.org/
         
         # quelle: http://banusha.blogspot.com/2009/10/ruby-on-rails-try-catch-fainally-block.html
-        #begin
+        begin
           rss = SimpleRSS.parse open(widget.sourceurl)
         
           if rss.items        
@@ -27,9 +27,9 @@ module DashboardsHelper
             # Quelle: http://blog.emeidi.com/2011/02/25/ruby-on-rails-3-kleinigkeiten/
             output.html_safe
           end
-        #rescue
-        #  flash[:error] = "Konnte Feed nicht abrufen. Bitte ueberpruefe die URL!"
-        #end
+        rescue
+          flash[:error] = "Konnte Feed nicht abrufen. Bitte ueberpruefe die URL!"
+        end
       end
     end
 end
